@@ -28,7 +28,9 @@ class Voyageur :
         
     def seDeplacer(self):
         """ deplacement d'un voyageur. Sortie : nouvelle position du voyageur (tuple d'entiers).
-        """
+        Le voyageur commence par observer les cases alentour et etablit ainsi une liste de possibilites.
+        Si une des cases accessibles est une des etapes de son trajet, il y va. Sinon, on choisit celle le devie le moins possible de son trajet
+        (produit scalaire) """
         maposition=self.grille.getPosition(self)
         casespossibles=autourVoyageur(maposition) 
         if casespossibles==[] : return(maposition) # aucune case accessible, le voyageur ne bouge pas
@@ -36,8 +38,8 @@ class Voyageur :
             maxi = -1
             for coord in casespossibles:
                 if coord in self.trajet :
-                    self.trajet.pop(coord)
-                    if self.trajet ==[] : grille.deleteVoyageur(self)
+                    self.trajet.pop(coord) # suppression de l'etape
+                    if self.trajet ==[] : grille.deleteVoyageur(self) # le voyageur est arrive ; on le supprime de la grille
                     return coord
                 else :
                     vecteur1=(self.trajet[0][0] - maposition[0], self.trajet[0][1] - maposition[1])
