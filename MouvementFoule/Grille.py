@@ -1,42 +1,43 @@
-from typing import List, Set, Dict, Tuple, Optional
+#from typing import List, Set, Dict, Tuple, Optional
 
 from Environnement import Voyageur, Obstacle, Porte
 
 class Grille:
+    """ classe qui detremine la grille dans laquelle les voyageurs vont evoluer """
     def  __init__(self):
-        self.voyageurs: Dict[Tuple[int, int], Voyageur] = dict()
-        self.obstacles: Dict[Tuple[int, int], Obstacle] = dict()
-        self.portes: Dict[Tuple[int, int], Porte] = dict()
+        self.voyageurs = dict()
+        self.obstacles = dict()
+        self.portes = dict()
         
-    def addVoyageur(self, coord: Tuple[int, int], v: Voyageur):
+    def addVoyageur(self, coord, v):
         pass
     
-    def addObstacle(self, coords: List[Tuple[int, int]], m: Obstacle):
+    def addObstacle(self, coords, m):
         pass
     
-    def addPorte(self, coords: List[Tuple[int, int]], p: Porte):
+    def addPorte(self, coords, p):
         pass
     
-    def getVoyageurs(self) -> Dict[Tuple[int, int], Voyageur]:
+    def getVoyageurs(self):
         pass
     
-    def getObstacles(self) -> Dict[Tuple[int, int], Obstacle]:
+    def getObstacles(self) :
         pass
     
-    def getPortes(self) -> Dict[Tuple[int, int], Porte]:
+    def getPortes(self):
         pass
     
-    def getPosition(self, v: Voyageur) -> Tuple[int, int]:
+    def getPosition(self, v) :
         pass
     
-    def setPosition(self, v: Voyageur, coord: Tuple[int, int]):
+    def setPosition(self, v, coord):
         pass
     
-    def getContenuCase(self, coord: Tuple[int, int]) -> Tuple[Optional[Voyageur], Optional[Obstacle], Optional[Porte]]:
+    def getContenuCase(self, coord) :
         pass
     
-    def getDirection(self, v: Voyageur, p: Porte) -> Tuple[int, int]:
+    def getDirection(self, v, p):
         pass
     
-    def deleteVoyageur(self, v: Voyageur):
+    def deleteVoyageur(self, v):
         pass

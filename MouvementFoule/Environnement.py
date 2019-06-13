@@ -1,6 +1,6 @@
 #from typing import List, Set, Dict, Tuple, Optional
 
-from Grille import Grille
+import Grille
 
 class Voyageur :
     """ cree et determine un voyageur ; attributs : une couleur (tuple de 3 entiers) et une liste trajet contenant les
