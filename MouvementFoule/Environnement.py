@@ -1,6 +1,7 @@
 
 import grille
 from math import *
+import random
 
 class Voyageur:
     """
@@ -28,6 +29,7 @@ class Voyageur:
     """
     def __init__(self, couleur, trajet, grille):
         self.couleur = couleur
+        self.proba=random.uniform(0.8,1)
         self.trajet = trajet
         self.grille = grille
         
@@ -67,7 +69,7 @@ class Voyageur:
         elif self.trajet[0] == self.grille.getContenuCase(maposition)[2]:
             self.trajet.pop(0)
             self.seDeplacer()
-        elif casespossibles != []: 
+        elif casespossibles != [] and random.uniform(0,1) < self.proba : 
             maxi = -1
             dir = self.grille.getDirection(self, self.trajet[0])
             normDir = sqrt(dir[0] * dir[0] + dir[1] * dir[1])
