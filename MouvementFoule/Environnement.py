@@ -1,4 +1,5 @@
-from grille import Grille
+
+import grille
 from math import *
 
 class Voyageur:
