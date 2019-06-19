@@ -1,0 +1,593 @@
+\documentclass[a4paper,french]{article}
+
+
+%Tableaux
+\usepackage{array}
+
+%\usepackage{pifont}
+\usepackage[french]{babel}
+\usepackage{times}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Lien hypertexte
+\usepackage{hyperref}
+%\setbeamercolor{titre}{bg=red,fg=white}
+%\setbeamercolor{texte}{bg=red!10,fg=black}
+%\beamerboxesdeclarecolorscheme{blocbleu}{blue}{yellow}
+%\definecolor{vertmoyen}{RGB}{51,110,23}
+%\beamerboxesdeclarecolorscheme{blocvert}{vertmoyen}{white}
+
+%Package Tikz
+\usepackage{tikz}
+
+%\usetheme{Warsaw}
+
+%\hypersetup{pdfpagemode=FullScreen}
+
+
+\colorlet{titre}{red}
+
+\definecolor{rouge}{HTML}{880000}
+%\setbeamercolor{background canvas}{bg=white}
+\newcounter{exonum}
+\newcommand{\Exo}{\addtocounter{exonum}{1}{{\large \textbf {Exercice \theexonum .}}}}
+\newcommand{\Titre}[1]{\textbf{{\large{#1}}}}
+
+% Formatage de la page
+% --------------------
+\pagestyle{headings}
+\oddsidemargin = 0.2in % 0in
+\evensidemargin = 0in
+\textwidth = 6.0in % 6.3in 348pt %
+\topmargin = -3cm
+\headheight = 0.2in
+\headsep = 0.5in
+\textheight = 270 mm % 9.4in 
+
+
+\begin{document}
+\pagestyle{empty}
+\parindent 0mm
+
+\begin{center}
+\Titre{1$^{\grave{e}re}$ NSI  -  Algorithmes de tris}
+\\[5mm]
+\end{center}
+\hrule
+\vspace*{5mm}
+
+%\section{Exercice 1}
+\Exo
+
+Par groupe de 4 élèves, effectuer les actions suivantes :
+\begin{enumerate}
+\item Dans un jeu de 32 cartes, regrouper les cartes d'une même couleur (cœur, carreau, trèfle, pique).
+\item Récupérer chacun une couleur.
+
+\item Mélanger chaque paquet.
+
+\item Trier dans l'ordre croissant (l'as est la carte de plus grande valeur).
+
+\item Exposer et échanger entre vous la manière de faire. Utiliser le cadre réponse ci-dessous.
+
+% Cadre réponse
+\noindent\fbox{\hbox to 15 cm{\vbox to 5cm{}}}
+
+\item Mélanger à nouveau les cartes et recommencer le tri en commençant par placer à gauche la carte de plus petite valeur. Est-ce la méthode utilisée précédemment ?
+
+% Cadre réponse
+\noindent\fbox{\hbox to 15 cm{\vbox to 2cm{}}}
+
+\item Rechercher sur Internet les méthodes de tri par insertion et de tri par sélection. Exposer ci-dessous le principe de ces méthodes. Est-ce que ces méthodes correspondent à celle que vous avez expérimentée aux questions (4) et (6) ?
+
+% Cadre réponse
+\noindent\fbox{\hbox to 15 cm{\vbox to 7cm{}}}
+\end{enumerate}
+\pagebreak
+
+\Exo
+\pagebreak
+
+
+Étant donné un tableau TAB de taille \textit{Taillemax}, on cherche à trier ses éléments dans \textbf{l'ordre croissant}.
+
+Pour cela, il existe plusieurs méthodes ; dans ce cours, nous allons en décrire deux :
+
+\begin{itemize}
+\item Le tri par sélection
+\item Le tri fusion
+\end{itemize}
+
+
+
+\section{Le tri par sélection}
+
+C'est la méthode de tri la plus intuitive, mais malheureusement elle est peu efficace en terme de complexité.
+
+
+\textbf{Le principe} : on recherche le plus grand (ou petit) élément du tableau TAB et on l'échange avec le dernier (ou le premier) élément du tableau. On poursuit ces opérations jusqu'à ce que le tableau soit trié.
+\medskip
+
+Un lien pour voir fonctionner le processus : 
+\url{http://lwh.free.fr/pages/algo/tri/tri_insertion.html}
+\medskip
+
+\subsection{Le tri par sélection : algorithme}
+
+\fbox{\parbox[c]{10cm}{
+Triselection(A: tableau, Taillemax : entier)
+\\
+\hspace*{5mm} variable locale 
+\hspace*{5mm} i,pos : entier
+
+\hspace*{5mm} DÉBUT
+\\
+\hspace*{10mm} fin $\longleftarrow$ Taillemax
+\\
+\hspace*{10mm} \textsc{Tant que} (...........................) \textsc{faire}
+\\
+\hspace*{15mm} pos $\longleftarrow$ 1
+\\
+\hspace*{15mm} plusgrand $\longleftarrow$ A[1]
+\\
+\hspace*{15mm} Pour i variant de 2 à .............. faire
+\\
+\hspace*{20mm} Si A[i] > plusgrand alors  
+\\
+\hspace*{25mm} plusgrand=A[i] 
+\\
+\hspace*{25mm} pos=i
+\\
+\hspace*{20mm} Fin si
+\\
+\hspace*{15mm} Fin pour
+\\
+\hspace*{15mm} Si pos $\neq$ fin alors Echanger(A[pos], A[fin])
+\\
+\hspace*{15mm} fin $\longleftarrow$ fin-1
+\\
+\hspace*{10mm} \textsc{Fin tant que}
+\\
+\hspace*{10mm} retourner(A)
+\\
+\hspace*{5mm} FIN
+}}
+\vspace*{5mm}
+
+\subsection{Le tri par sélection : un exemple}
+
+Trier les éléments du tableau ci-dessous en déroulant l'algorithme précédent à la main :
+\setlength{\extrarowheight}{1mm}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+8 & 3 & 6 & 5 & 4 \\ 
+\hline 
+\end{tabular} 
+\bigskip
+
+{\textbf{Étape 1} 
+
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{8} & 3 & 6 & 5 & 4 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\texttt{fin=5}
+\\
+\texttt{pos =1}
+\\
+\texttt{plusgrand = A[1] = 8}  et 8 reste le plus grand élément du tableau donc \texttt{pos} est encore égal à 1 à la fin de la boucle \textsc{pour} ; on échange A[1] et A[5], soit 8 et 4 :
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{4} & 3 & 6 & 5 & \textbf{8} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\textbf{Étape 2} 
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{4} & 3 & 6 & 5 & 8\\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\texttt{fin=4}
+\\
+\texttt{pos =1}
+\\
+\texttt{plusgrand = A[1] = 4}  et 4 n'est pas le plus grand élément du tableau restant ; à la fin de la boucle \textsc{pour}, \texttt{plusgrand} est égal à 6 et \texttt{pos} vaut 3 ; on échange A[3] et A[4], soit 6 et 5 :
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+4 & 3 & \textbf{5} & \textbf{6} & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\textbf{Étape 3} 
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{4} & 3 & 5 & 6 & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\texttt{fin=3}
+\\
+\texttt{pos =1}
+\\
+\texttt{plusgrand = A[1] = 4}  et 4 n'est pas le plus grand élément du tableau restant ; à la fin de la boucle \textsc{pour}, \texttt{plusgrand} est égal à 5 et \texttt{pos} vaut 3 ; comme les variables \texttt{pos} et \texttt{fin} sont égales, 5 reste à sa place :
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+4 & 3 & \textbf{5} & 6 & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\textbf{Étape 4} 
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{4} & 3 & 5 & 6 & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\texttt{fin=2}
+\\
+\texttt{pos =1}
+\\
+\texttt{plusgrand = A[1] = 4}  et 4 reste le plus grand élément du tableau restant ; donc \texttt{pos} est encore égal à 1 à la fin de la boucle \textsc{pour} ; on échange A[1] et A[2], soit 4 et 3 :
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{3} & \textbf{4} & 5 & 6 & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\textbf{Étape 5} 
+\begin{center}
+\setlength{\extrarowheight}{1mm}
+A = \begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{3} & 4 & 5 & 6 & 8 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\texttt{fin=1} 
+C'est terminé le tableau A est trié
+
+\bigskip
+
+\textbf{Un autre exemple avec animation} : 
+http: // lwh.free.fr $/$ pages/algo/tri/tri$\_$ selection.html
+\vspace*{5mm}
+
+\subsection{Le tri par sélection : complexité}
+
+\begin{enumerate}
+\item Combien de comparaisons vont être effectuées dans tous les cas  ?
+\\
+\item Si le tableau contient 20 millions de valeurs, combien y aura-t-il de comparaisons dans tous les cas ?
+\end{enumerate}
+\bigskip
+
+\textsc{Admis}
+\\
+\fbox{\parbox[c]{14cm}{
+La complexité de la méthode de tri par sélection d'un tableau contenant n éléments est $O(n^2)$. 
+}}
+\vspace*{8mm}
+
+\section{Le tri fusion}
+
+Le premier algorithme de tri fusion a été écrit par Von Neumann l'EDVAC en 1945. 
+\medskip
+
+Cette méthode de tri utilise le principe de récursivité, c'est-à-dire que la méthode s'appelle elle-même.
+
+\begin{itemize}
+\item \textbf{Diviser} : on divise le tableau à trier en deux sous-tableaux de même taille (au "milieu").
+
+\item \textbf{Régner} : 
+\begin{itemize}
+\item Tout tableau de taille 1 est trié
+\item On trie les deux sous-tableaux (récursivement) ; on s'arrête lorsque les sous-tableaux sont de taille 1.
+\end{itemize}
+ 
+\item \textbf{Combiner} :  
+ on fusionne les deux sous tableaux triés en un tableau trié. C'est à cette étape que le tableau est trié.
+ 
+ \item  \textbf{Complexité} :  $nlog_2(n)$
+\end{itemize}
+\medskip
+
+Un lien pour visualiser le processus : \url{http://lwh.free.fr/pages/algo/tri/tri_fusion.html}
+\subsection{Le tri fusion : algorithme(1)}
+
+\fbox{\parbox[c]{10cm}{
+Trifusion(A: tableau d'entiers, deb : entier, fin : entier)
+\\
+\hspace*{5mm} variable locale 
+\hspace*{5mm} m : entier
+
+\hspace*{5mm} DÉBUT
+\\
+\hspace*{10mm}  \textsc{Si} (deb < fin) \textsc{alors}
+\\
+\hspace*{15mm}  m $\longleftarrow$ E((deb+fin)/2)
+\\
+\hspace*{15mm}  Trifusion(A,deb,m)
+\\
+\hspace*{15mm}  Trifusion(A,m+1,fin)
+\\
+\hspace*{15mm} Fusion(A,deb,m,fin)
+\\
+\hspace*{10mm} \textsc{Fin si}
+\\
+\hspace*{5mm} FIN
+}}
+\vspace*{5mm}
+
+\subsection{Le tri fusion : algorithme(2)}
+
+Les deux sous-tableaux sont triés ; on les fusionne en un seul.
+\bigskip
+
+\fbox{\parbox[c]{10cm}{
+Fusion(A: tableau d'entiers, deb : entier, pivot : entier , fin : entier)
+\\
+\hspace*{5mm} variables locales 
+\hspace*{5mm} i,j,k : entier \hspace*{5mm} B : tableau d'entiers
+
+\hspace*{5mm} DÉBUT
+\\
+\hspace*{10mm} i $\longleftarrow$ deb 
+\hspace*{5mm} k $\longleftarrow$ deb 
+\hspace*{5mm} j $\longleftarrow$ pivot+1 
+\\
+\hspace*{10mm}  \textsc{Tant que} (i $\leq$ ............) et (..................) \textsc{faire}
+\\
+\hspace*{15mm}  Si A[i] < A[j] alors 
+\\
+\hspace*{20mm} B[k]=A[i]
+\\
+\hspace*{20mm} i $\longleftarrow$ i+1
+\\
+\hspace*{15mm}  Sinon 
+\\
+\hspace*{20mm} B[k]=A[j]
+\\
+\hspace*{20mm} j $\longleftarrow$ j+1
+\\
+\hspace*{15mm}  Fin Si
+\\
+\hspace*{15mm} k $\longleftarrow$ k+1
+\\
+\hspace*{10mm} \textsc{Fin Tant que}
+\\
+\textit{On a atteint la fin du deuxième tableau, mais il reste des éléments du premier tableau: on complète le tableau B avec ces éléments}
+\\
+\hspace*{10mm}  \textsc{Tant que} (i $\leq$ ............)  \textsc{faire}
+\\
+\hspace*{15mm}  B[k]=A[i]
+\\
+\hspace*{15mm} i $\longleftarrow$ i+1
+\\
+\hspace*{15mm} k $\longleftarrow$ k+1
+\\
+\hspace*{10mm} \textsc{Fin Tant que}
+\\
+\textit{On a atteint la fin du premier tableau, mais il reste des éléments du deuxième tableau: on complète le tableau B avec ces éléments}
+\\
+\hspace*{10mm}  \textsc{Tant que} (j $\leq$ ............)  \textsc{faire}
+\\
+\hspace*{15mm} B[k]=A[j]
+\\
+\hspace*{15mm} j $\longleftarrow$ j+1
+\\
+\hspace*{15mm} k $\longleftarrow$ k+1
+\\
+\hspace*{10mm} \textsc{Fin Tant que}
+\\ 
+\hspace*{10mm} A $\longleftarrow$ B
+\\
+\hspace*{10mm} retourner(A)
+\\
+\hspace*{5mm} FIN
+}}
+\vspace*{5mm}
+\pagebreak
+
+\subsection{Le tri fusion :exemple(1)}
+
+Trier les éléments du tableau :
+\setlength{\extrarowheight}{1mm}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+6 & 1 & 3 & 8 & 4 \\ 
+\hline 
+\end{tabular} 
+\bigskip
+
+\textbf{Les divisions successives ...}
+\bigskip
+
+\setlength{\extrarowheight}{1mm}
+%\hspace*{15mm}
+%\begin{tabular}{ccccc}
+%&   & \texttt{pos} &  & \\
+%& &$\downarrow$ & &  \\
+%\end{tabular} \\
+\hspace*{12mm}
+\begin{tabular}{|ccccc|}
+\hline 
+6 & 1 & 3 & 8 & 4 \\ 
+\hline 
+\end{tabular}  
+\hspace*{15mm} \texttt{deb = 1} \quad \texttt{fin = 5} \quad \texttt{pos = 3}
+\medskip
+
+\hspace*{18mm} $\swarrow$ \qquad $\searrow$
+\medskip
+
+\hspace*{5mm}
+\begin{tabular}{|ccc|}
+\hline 
+6 & 1 & 3  \\ 
+\hline 
+\end{tabular}
+\qquad
+\begin{tabular}{|cc|}
+\hline 
+8 & 4  \\ 
+\hline 
+\end{tabular}
+\hspace*{8mm} \texttt{deb = 1} \  \texttt{fin = 3} \ \texttt{pos = 2} / \texttt{deb = 1} \  \texttt{fin = 2} \  \texttt{pos = 1}
+\medskip
+
+\hspace*{9mm} $\swarrow$ \quad $\searrow$ \hspace*{10mm} $\swarrow$ \quad $\searrow$
+\medskip
+
+\hspace*{2mm}
+\begin{tabular}{|cc|}
+\hline 
+6 & 1   \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+3  \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+8   \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+4   \\ 
+\hline 
+\end{tabular}
+\hspace*{8mm}  \texttt{deb = 1} \  \texttt{fin = 2} \  \texttt{pos = 1}
+\medskip
+
+\hspace*{3mm} $\swarrow$ \quad $\searrow$ 
+\medskip
+
+\begin{tabular}{|c|}
+\hline 
+6   \\ 
+\hline 
+\end{tabular}
+\hspace*{3mm}
+\begin{tabular}{|c|}
+\hline 
+1  \\ 
+\hline 
+\end{tabular}
+\bigskip
+
+\textbf{Les fusions successives ...  en commençant par le bas}
+\bigskip
+
+
+\setlength{\extrarowheight}{1mm}
+\hspace*{12mm}
+\begin{tabular}{|ccccc|}
+\hline 
+1 & 3 & 4 & 6 & 8 \\ 
+\hline 
+\end{tabular}  
+\medskip
+
+\hspace*{18mm} $\nearrow$ \qquad $\nwarrow$
+\medskip
+
+\hspace*{5mm}
+\begin{tabular}{|ccc|}
+\hline 
+1 & 3 & 6  \\ 
+\hline 
+\end{tabular}
+\qquad
+\begin{tabular}{|cc|}
+\hline 
+4 & 8  \\ 
+\hline 
+\end{tabular}
+\medskip
+
+\hspace*{9mm} $\nearrow$ \quad $\nwarrow$ \hspace*{10mm} $\nearrow$ \quad $\nwarrow$
+\medskip
+
+\hspace*{2mm}
+\begin{tabular}{|cc|}
+\hline 
+1 & 6  \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+3  \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+8   \\ 
+\hline 
+\end{tabular}
+\quad
+\begin{tabular}{|c|}
+\hline 
+4   \\ 
+\hline 
+\end{tabular}
+\medskip
+
+\hspace*{3mm} $\nearrow$ \quad $\nwarrow$ 
+\medskip
+
+\begin{tabular}{|c|}
+\hline 
+6   \\ 
+\hline 
+\end{tabular}
+\hspace*{3mm}
+\begin{tabular}{|c|}
+\hline 
+1  \\ 
+\hline 
+\end{tabular}
+\bigskip
+
+\textbf{Un autre exemple avec animation} : http://lwh.free.fr/pages/algo/tri/tri$\_$fusion.html
+
+\end{document}
