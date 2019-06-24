@@ -13,8 +13,12 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+% Algorithmes
+\usepackage[linesnumbered, french]{algorithm2e}
+
 % Lien hypertexte
 \usepackage{hyperref}
+
 %\setbeamercolor{titre}{bg=red,fg=white}
 %\setbeamercolor{texte}{bg=red!10,fg=black}
 %\beamerboxesdeclarecolorscheme{blocbleu}{blue}{yellow}
@@ -82,12 +86,534 @@ Par groupe de 4 élèves, effectuer les actions suivantes :
 % Cadre réponse
 \noindent\fbox{\hbox to 15 cm{\vbox to 2cm{}}}
 
-\item Rechercher sur Internet les méthodes de tri par insertion et de tri par sélection. Exposer ci-dessous le principe de ces méthodes. Est-ce que ces méthodes correspondent à celle que vous avez expérimentée aux questions (4) et (6) ?
+\item Rechercher sur Internet les méthodes de tri par insertion et de tri par sélection. Exposer ci-dessous le principe de ces méthodes. Est-ce que ces méthodes correspondent à celle(s) que vous avez expérimentée(s) aux questions (4) et (6) ?
 
 % Cadre réponse
 \noindent\fbox{\hbox to 15 cm{\vbox to 7cm{}}}
 \end{enumerate}
 \pagebreak
+
+%\section{Exercice 2}
+\Exo
+
+À l'aide des manipulations et des recherches faites dans l'exercice précédent, compléter les algorithmes ci-dessous :
+
+\begin{enumerate}
+%\subsection{Tri sélection}
+\item Algorithme du tri par sélection : 
+
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+TriSelection ($S$ : Tab)\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$indice$ : entier - indice de l'élément le plus petit\;
+}
+\PrintSemicolon
+\BlankLine
+\Deb{
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+}
+\end{algorithm}
+
+%\subsection{Tri insertion}
+\item Algorithme du tri par insertion : 
+
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+TriInsertion ($S$ : Tab)\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$valeur$ : entier - valeur de l'élément à déplacer par insertion\;
+$indice$ : entier - indice futur de l'élément à déplacer par insertion\;
+}
+\PrintSemicolon
+\BlankLine 
+\Deb{
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+}
+\end{algorithm}
+\medskip
+
+\item Dérouler \og à la main \fg les algorithmes précédents avec les combinaisons :
+% Choix d'une combinaison de 4 cartes et de 8 cartes
+
+\begin{enumerate}
+\item Pour chaque combinaison, compter le nombre de comparaisons et de déplacements effectués puis compléter le tableau ci-dessous.
+
+\setlength{\extrarowheight}{2mm}
+\begin{tabular}{|c|c|c|c|c|}
+\cline{2-5}
+\multicolumn{1}{c|}{} &\multicolumn{2}{|c|}{Tri sélection} & \multicolumn{2}{|c|}{Tri insertion}
+\\ \cline{2-5}
+\multicolumn{1}{c|}{}  & Nb comparaisons & Nb déplacements & Nb comparaisons & Nb déplacements \\
+\hline
+4 cartes &  &   &   &   \\[2mm] \hline
+8 cartes &   &   &   &   \\[2mm] \hline
+\end{tabular}
+\\[2mm]
+\item Les combinaisons proposées sont-elles triées à la fin de chaque algorithme ?
+\end{enumerate}
+
+\end{enumerate}
+
+\pagebreak
+\item Algorithme du tri par sélection : 
+
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+TriSelection ($S$ : Tab)\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$indice$ : entier - indice de l'élément le plus petit\;
+}
+\PrintSemicolon
+\BlankLine
+\Deb{
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+}
+\end{algorithm}
+
+\item Algorithme du tri par insertion : 
+
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+TriInsertion ($S$ : Tab)\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$valeur$ : entier - valeur de l'élément à déplacer par insertion\;
+$indice$ : entier - indice futur de l'élément à déplacer par insertion\;
+}
+\PrintSemicolon
+\BlankLine 
+\Deb{
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+\BlankLine
+}
+\end{algorithm}
+\medskip
+
+\item Dérouler \og à la main \fg les algorithmes précédents avec les combinaisons :
+% Choix d'une combinaison de 4 cartes et de 8 cartes
+
+\begin{enumerate}
+\item Pour chaque combinaison, compter le nombre de comparaisons et de déplacements effectués puis compléter le tableau ci-dessous.
+
+\setlength{\extrarowheight}{2mm}
+\begin{tabular}{|c|c|c|c|c|}
+\cline{2-5}
+\multicolumn{1}{c|}{} &\multicolumn{2}{|c|}{Tri sélection} & \multicolumn{2}{|c|}{Tri insertion}
+\\ \cline{2-5}
+\multicolumn{1}{c|}{}  & Nb comparaisons & Nb déplacements & Nb comparaisons & Nb déplacements \\
+\hline
+4 cartes &  &   &   &   \\[2mm] \hline
+8 cartes &   &   &   &   \\[2mm] \hline
+\end{tabular}
+\\[2mm]
+\item Les combinaisons proposées sont-elles triées à la fin de chaque algorithme ?
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\pagebreak
+
 
 Étant donné un tableau TAB de taille \textit{Taillemax}, on cherche à trier ses éléments dans \textbf{l'ordre croissant}.
 
@@ -102,10 +628,10 @@ Pour cela, il existe plusieurs méthodes ; dans ce cours, nous allons en décrir
 
 \section{Le tri par sélection}
 
-C'est la méthode de tri la plus intuitive, mais malheureusement elle est peu efficace en terme de complexité.
+C'est la méthode de tri la plus intuitive, mais malheureusement elle est peu efficace en terme de \textit{coût}.
 
 
-\textbf{Le principe} : on recherche le plus grand (ou petit) élément du tableau TAB et on l'échange avec le dernier (ou le premier) élément du tableau. On poursuit ces opérations jusqu'à ce que le tableau soit trié.
+\textbf{Le principe} : on recherche le plus petit (ou grand) élément du tableau TAB et on l'échange avec le premier (ou le dernier) élément du tableau. On poursuit ces opérations jusqu'à ce que le tableau soit trié.
 \medskip
 
 Un lien pour voir fonctionner le processus : 
@@ -122,7 +648,7 @@ Triselection(A: tableau, Taillemax : entier)
 
 \hspace*{5mm} DÉBUT
 \\
-\hspace*{10mm} fin $\longleftarrow$ Taillemax
+\hspace*{10mm} fin $\longleftarrow$ T.Taille
 \\
 \hspace*{10mm} \textsc{Tant que} (...........................) \textsc{faire}
 \\
