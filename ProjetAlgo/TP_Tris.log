@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  24 JUN 2019 09:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  24 JUN 2019 09:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -704,45 +704,45 @@ Overfull \hbox (29.97133pt too wide) in paragraph at lines 92--93
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 109.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 112.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 105--216
+Overfull \hbox (30.0pt too wide) in paragraph at lines 108--219
 $[]$ 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 221--333
+Overfull \hbox (30.0pt too wide) in paragraph at lines 224--336
 $[]$ 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 343--353
+Underfull \hbox (badness 10000) in paragraph at lines 349--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--369
+Underfull \hbox (badness 10000) in paragraph at lines 366--375
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 373--382
+Underfull \hbox (badness 10000) in paragraph at lines 379--388
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 385.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 391.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
 
 (./TP_Tris.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
 Package rerunfilecheck Info: File `TP_Tris.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 404.
  ) 
 Here is how much of TeX's memory you used:
  17830 strings out of 492649
@@ -756,13 +756,14 @@ Here is how much of TeX's memory you used:
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
 ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb>
-Output written on TP_Tris.pdf (4 pages, 68264 bytes).
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fo
+nts/type1/urw/times/utmr8a.pfb>
+Output written on TP_Tris.pdf (4 pages, 76926 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  28 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

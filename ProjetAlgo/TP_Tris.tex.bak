@@ -378,12 +378,20 @@ $indice$ : entier - indice futur de l'élément à déplacer par insertion\;
 \hline
 8 cartes triées &   &   &   &   \\[2mm] \hline
 \end{tabular}
+\\[2mm]
+
+\item D'autres exemples avec animation :
+\begin{itemize}
+\item \url{http://lwh.free.fr/pages/algo/tri/tri$\_$selection.html}
+\item \url{http://lwh.free.fr/pages/algo/tri/tri$\_$insertion.html}
+\end{itemize}
+
 \end{enumerate}
 
 \pagebreak
 
 
 
-\textbf{Un autre exemple avec animation} : http://lwh.free.fr/pages/algo/tri/tri$\_$fusion.html
+
 
 \end{document}
