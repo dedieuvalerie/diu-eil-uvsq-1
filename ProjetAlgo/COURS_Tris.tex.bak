@@ -1,0 +1,273 @@
+\documentclass[a4paper,french]{article}
+
+
+%Tableaux
+\usepackage{array}
+
+%\usepackage{pifont}
+\usepackage[french]{babel}
+\usepackage{times}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Algorithmes
+\usepackage[linesnumbered, french]{algorithm2e}
+
+% Lien hypertexte
+\usepackage{hyperref}
+
+%\setbeamercolor{titre}{bg=red,fg=white}
+%\setbeamercolor{texte}{bg=red!10,fg=black}
+%\beamerboxesdeclarecolorscheme{blocbleu}{blue}{yellow}
+%\definecolor{vertmoyen}{RGB}{51,110,23}
+%\beamerboxesdeclarecolorscheme{blocvert}{vertmoyen}{white}
+
+%Package Tikz
+\usepackage{tikz}
+
+%\usetheme{Warsaw}
+
+%\hypersetup{pdfpagemode=FullScreen}
+
+
+\colorlet{titre}{red}
+
+\definecolor{rouge}{HTML}{880000}
+%\setbeamercolor{background canvas}{bg=white}
+\newcounter{exonum}
+\newcommand{\Exo}{\addtocounter{exonum}{1}{{\large \textbf {Exercice \theexonum .}}}}
+\newcommand{\Titre}[1]{\textbf{{\large{#1}}}}
+
+% Formatage de la page
+% --------------------
+\pagestyle{headings}
+\oddsidemargin = 0.2in % 0in
+\evensidemargin = 0in
+\textwidth = 6.0in % 6.3in 348pt %
+\topmargin = -3cm
+\headheight = 0.2in
+\headsep = 0.5in
+\textheight = 270 mm % 9.4in 
+
+
+\begin{document}
+\pagestyle{empty}
+\parindent 0mm
+
+\begin{center}
+\Titre{1$^{\grave{e}re}$ NSI  -  Algorithmes de tri : le cours}
+\\[5mm]
+\end{center}
+\hrule
+\vspace*{5mm}
+
+Dans ce chapitre, on désire trier éléments d'un tableau donné dans l'ordre croissant. 
+
+\bigskip
+
+\section{Tri par sélection}
+
+C'est la méthode de tri la plus intuitive. 
+
+Le tableau à trier est \og divisé \fg en deux parties : la $1^{\grave{e}re}$ constituée des éléments triés (initialisée avec seulement le $1^{er}$ élément) et la seconde constituée des éléments non triés (initialisée du $2^{\grave{e}me}$ au dernier élément)
+\medskip
+
+\begin{itemize}
+\item Le premier élément constitue, à lui tout seul, un tableau trié de longueur 1.
+
+\item On recherche le plus petit élément dans la partie non triée du tableau et on l'échange avec le dernier élément de la partie triée du tableau. À la première étape, le plus petit élément du tableau est donc mis au début. On obtient alors un sous-tableau trié de longueur 1.  
+
+\item On augmente de 1 la taille du sous-tableau trié, en y incluant le deuxième élément du tableau. On recherche le plus petit élément dans la partie non triée du tableau, en commençant par le troisième élément, et on l'échange avec le dernier élément de la partie triée du tableau. On obtient alors un sous-tableau trié de longueur 2. Et ainsi de suite...
+
+\item Le principe du tri par sélection est donc d'échanger à la $n^{ieme}$ itération le dernier élément de la partie  triée du tableau avec le plus petit élément de la partie  non triée du tableau.
+\end{itemize}
+\medskip
+
+%\subsection{Algo}
+$\hookrightarrow$ \textsc{Algorithme du tri par sélection}
+\medskip
+
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+TriSelection ($S$ : Tab)\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$indice$ : entier - indice de l'élément le plus petit\;
+}
+\PrintSemicolon
+\BlankLine
+\Deb{
+
+\Pour{i=1 \KwA S.Fin-1}{
+- initialisation de l'indice de l'élément le plus petit avec l'indice du dernier élément de la partie du tableau trié
+
+$indice \leftarrow i$\;
+\BlankLine
+- recherche de l'élément le plus petit de la partie du tableau non triée
+
+\Pour{j=i+1 \KwA S.Fin}{
+\Si{S[j]<=S[indice]}{
+- Mise à jour de l'indice de l'élément le plus petit de la partie du tableau non trié
+
+$indice \leftarrow j$\;
+}
+}
+- permutation de cet élément le plus petit avec le $1^{er}$ élément de la partie du tableau non triée qui devient le dernier élément de la partie du tableau trié.
+
+$S[i] \leftrightarrow S[indice]$
+}
+}
+\end{algorithm}
+%\bigskip
+\pagebreak
+
+%\subsection{Exemple}
+$ \hookrightarrow$ \textsc{Un exemple pour illustrer}
+\medskip
+
+\includegraphics[scale=0.5]{Triparselection.png}
+\bigskip
+
+
+$\hookrightarrow$ Un lien pour voir fonctionner le processus : 
+\url{http://lwh.free.fr/pages/algo/tri/tri_selection.html}
+\bigskip
+
+%\subsection{Complexité}
+$\hookrightarrow$ \textsc{La complexité de l'algorithme}
+
+\begin{enumerate}
+\item Combien de comparaisons et d'échanges vont être effectués dans tous les cas  ?
+\\
+\item Si le tableau contient 20 millions de valeurs, combien y aura-t-il de comparaisons et d'échanges dans tous les cas ?
+\end{enumerate}
+\bigskip
+
+\textsc{Admis}
+\\
+\fbox{\parbox[c]{14cm}{
+La complexité de la méthode de tri par sélection d'un tableau contenant $n$ éléments est $O(n^2)$. 
+}}
+
+\pagebreak
+
+\section{Tri par insertion}
+
+Le tri par insertion le tri \og naturel \fg du joueur de cartes. 
+
+Le tableau à trier est \og divisé \fg en deux parties : la $1^{\grave{e}re}$ constituée des éléments triés (initialisée avec seulement le $1^{er}$ élément du tableau) et la seconde partie constituée des éléments non triés du tableau (initialisée du $2^{\grave{e}me}$ au dernier élément). On procède comme si les éléments d'un tableau à trier étaient donnés un par un.
+\medskip
+
+\begin{itemize}
+\item Le premier élément constitue, à lui tout seul, un tableau trié de longueur 1.
+
+\item On range ensuite le second élément \og à sa place \fg pour constituer un tableau trié de longueur 2, puis on range le troisième élément pour avoir une tableau trié de longueur 3 et ainsi de suite... 
+
+\item Le principe du tri par insertion est donc d'insérer à la $n^{ieme}$ itération le $n^{ieme}$ élément à la \og bonne \fg place.
+\end{itemize}  
+\bigskip
+
+%\subsection{Algo}
+$\hookrightarrow$ \textsc{Algorithme du tri par insertion}
+\medskip
+
+\fbox{\parbox[c]{14cm}{
+\begin{algorithm}[H]
+\SetKwInput{Entree}{Entrée}
+\SetKwInput{Donnees}{Variables locales}
+\DontPrintSemicolon
+\texttt{TriInsertion (S : Tab)}\;
+\Entree{\;\Indp
+$S$ : tableau non trié d'entiers\;
+}
+\Sortie{\;\Indp
+$S$ : tableau trié
+}
+\BlankLine
+\DontPrintSemicolon
+\Donnees{\;\Indp
+$i$ : entier - compteur pour boucle\;
+$j$ : entier - compteur pour boucle\;
+$valeur$ : entier - valeur de l'élément à déplacer par insertion\;
+$indice$ : entier - indice futur de l'élément à déplacer par insertion\;
+}
+\PrintSemicolon
+\BlankLine 
+\Deb{
+
+- le tableau est constitué de deux parties : la $1^{\grave{e}re}$ constituée des éléments triés (initialisée avec seulement le $1^{er}$ élément du tableau) et la seconde partie constituée des éléments non triés du tableau (initialisée du $2^{\grave{e}me}$ au dernier élément)
+
+\Pour{i=1 \KwA S.Fin-1}{
+- mémorisation du $1^{er}$ élément de la partie du tableau non trié que nous allons déplacer
+
+$valeur \leftarrow S[i+1]$
+\BlankLine 
+- recherche de l'indice que doit prendre ce 1er élément dans la partie du tableau trié
+
+$indice \leftarrow 1$
+
+\Tq{S[indice]<valeur}{
+$indice \leftarrow indice+1$
+}
+\BlankLine 
+- décalage des éléments compris entre le dernier élément de la partie du tableau trié et l'emplacement trouvé précédemment (parcours décroissant) 
+
+\Pour{j=i \KwA indice en décroissant}{
+$S[j+1] \leftarrow S[j]$
+}
+\BlankLine
+- Déplacement par insertion du $1^{er}$ élément de la partie du tableau non trié à l'indice trouvé ... qui devient un élément trié
+
+$S[indice] \leftarrow valeur$
+}
+}
+\end{algorithm}
+}}
+%\bigskip
+\pagebreak
+
+%\subsection{Exemple}
+$ \hookrightarrow$ \textsc{Un exemple pour illustrer}
+\medskip
+
+\includegraphics[scale=0.5]{Triparinsertion.png}
+\bigskip
+
+%\subsection{Complexité}
+$ \hookrightarrow$ Un lien pour voir fonctionner le processus : 
+\url{http://lwh.free.fr/pages/algo/tri/tri_insertion.html}
+\bigskip
+
+$\hookrightarrow$ \textsc{La complexité de l'algorithme}
+
+\begin{enumerate}
+\item Combien de comparaisons et d'échanges vont être effectués dans le meilleur cas ?
+\\
+\item Combien de comparaisons et d'échanges vont être effectués dans le pire cas ?
+\\
+\item Si le tableau contient 20 millions de valeurs, combien y aura-t-il de comparaisons et d'échanges dans le pire cas ?
+\end{enumerate}
+\bigskip
+
+\textsc{Admis}
+\\
+\fbox{\parbox[c]{14cm}{
+La complexité de la méthode de tri par insertion d'un tableau contenant $n$ éléments est $O(n^2)$. 
+}}
+
+
+\end{document}
