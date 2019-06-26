@@ -58,7 +58,7 @@
 \parindent 0mm
 
 \begin{center}
-\Titre{1$^{\grave{e}re}$ NSI  -  Algorithmes de tris}
+\Titre{1$^{\grave{e}re}$ NSI  -  Algorithmes de tri}
 \\[5mm]
 \end{center}
 \hrule
@@ -70,27 +70,32 @@
 Par groupe de 4 élèves, effectuer les actions suivantes :
 \begin{enumerate}
 \item Dans un jeu de 32 cartes, regrouper les cartes d'une même couleur (cœur, carreau, trèfle, pique).
-\item Récupérer chacun une couleur.
+\item Récupérer chacun une couleur (à garder jusqu'à la fin de la séance).
 
 \item Mélanger chaque paquet.
 
 \item Trier dans l'ordre croissant (l'as est la carte de plus grande valeur).
 
-\item Exposer et échanger entre vous la manière de faire. Utiliser le cadre réponse ci-dessous.
+\item Exposer et échanger entre vous la manière de faire. Utiliser le cadre réponse ci-dessous pour en rendre compte.
 
 % Cadre réponse
 \noindent\fbox{\hbox to 15 cm{\vbox to 5cm{}}}
+\medskip
 
 \item Mélanger à nouveau les cartes et recommencer le tri en commençant par placer à gauche la carte de plus petite valeur. Est-ce la méthode utilisée précédemment ?
 
 % Cadre réponse
 \noindent\fbox{\hbox to 15 cm{\vbox to 2cm{}}}
+\medskip
 
 \item Rechercher sur Internet les méthodes de tri par insertion et de tri par sélection. Exposer ci-dessous le principe de ces méthodes. Est-ce que ces méthodes correspondent à celle(s) que vous avez expérimentée(s) aux questions (4) et (6) ?
 
 % Cadre réponse
 \noindent\fbox{\hbox to 15 cm{\vbox to 7cm{}}}
 \end{enumerate}
+\bigskip
+
+$\hookrightarrow$ POINT COURS : METHODES DE TRIS PAR INSERTION ET PAR SÉLECTION (diaporama - 10 min)
 \pagebreak
 
 %\section{Exercice 2}
@@ -333,11 +338,27 @@ $indice$ : entier - indice futur de l'élément à déplacer par insertion\;
 \end{algorithm}
 \medskip
 
-\item Dérouler \og à la main \fg les algorithmes précédents avec les combinaisons :
+$\hookrightarrow$ POINT COURS : CORRECTION (diaporama - 10 min)
+%\medskip
+\pagebreak
+
+%\subsection{Dérouler à la main}
+\item Dérouler \og à la main \fg les algorithmes précédents avec les deux combinaisons de cartes suivantes :
 % Choix d'une combinaison de 4 cartes et de 8 cartes
 
+\begin{itemize}
+\item[$\triangleright$] \framebox{\texttt{10}} \hspace{2mm} \framebox{\texttt{8}} 
+\hspace{2mm} \framebox{\texttt{D}}  \hspace{2mm} \framebox{\texttt{9}}
+\medskip
+
+\item[$\triangleright$] \framebox{\texttt{V}} \hspace{2mm} \framebox{\texttt{AS}} 
+\hspace{2mm} \framebox{\texttt{8}}  \hspace{2mm} \framebox{\texttt{D}} \hspace{2mm} \framebox{\texttt{10}} \hspace{2mm} \framebox{\texttt{7}} 
+\hspace{2mm} \framebox{\texttt{9}}  \hspace{2mm} \framebox{\texttt{R}}
+\end{itemize}
+\medskip
+ 
 \begin{enumerate}
-\item Pour chaque combinaison, compter le nombre de comparaisons et de déplacements effectués puis compléter le tableau ci-dessous.
+\item Pour chaque combinaison, compter le nombre de comparaisons et de déplacements effectués puis compléter le tableau ci-dessous.  Un algorithme paraît-il plus performant que l'autre ?
 
 \setlength{\extrarowheight}{2mm}
 \begin{tabular}{|c|c|c|c|c|}
@@ -350,7 +371,7 @@ $indice$ : entier - indice futur de l'élément à déplacer par insertion\;
 8 cartes &   &   &   &   \\[2mm] \hline
 \end{tabular}
 \\[2mm]
-\item Les combinaisons proposées sont-elles triées à la fin de chaque algorithme ?
+\item Les algorithmes ont-ils triés correctement les combinaisons aléatoires de cartes ? Est-ce une preuve totale ?
 \end{enumerate}
 \medskip
 
@@ -385,10 +406,11 @@ $indice$ : entier - indice futur de l'élément à déplacer par insertion\;
 \item \url{http://lwh.free.fr/pages/algo/tri/tri$\_$selection.html}
 \item \url{http://lwh.free.fr/pages/algo/tri/tri$\_$insertion.html}
 \end{itemize}
-
 \end{enumerate}
+\bigskip
 
-\pagebreak
+$\hookrightarrow$ POINT COURS : PREUVE ET COMPLEXITÉ (diaporama)
+
 
 
 

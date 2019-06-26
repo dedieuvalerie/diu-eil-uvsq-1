@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  24 JUN 2019 09:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  26 JUN 2019 15:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -676,27 +676,27 @@ Underfull \hbox (badness 10000) detected at line 82
  []
 
 
-Overfull \hbox (29.97133pt too wide) in paragraph at lines 82--83
-[] 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 87
+Overfull \hbox (29.97133pt too wide) in paragraph at lines 82--84
 []
  []
 
 
-Overfull \hbox (29.97133pt too wide) in paragraph at lines 87--88
-[] 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 92
+Underfull \hbox (badness 10000) detected at line 88
 []
  []
 
 
-Overfull \hbox (29.97133pt too wide) in paragraph at lines 92--93
+Overfull \hbox (29.97133pt too wide) in paragraph at lines 88--90
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[]
+ []
+
+
+Overfull \hbox (29.97133pt too wide) in paragraph at lines 94--95
 [] 
  []
 
@@ -704,50 +704,56 @@ Overfull \hbox (29.97133pt too wide) in paragraph at lines 92--93
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 112.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 108--219
+Overfull \hbox (30.0pt too wide) in paragraph at lines 110--221
 $[]$ 
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 224--336
+Overfull \hbox (30.0pt too wide) in paragraph at lines 226--338
 $[]$ 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 349--359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--375
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 379--388
-
- []
-
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 391.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
+[2] [3]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 350.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 364--374
 
-(./TP_Tris.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+ []
+
+
+Overfull \hbox (0.1851pt too wide) in paragraph at lines 374--375
+[]\T1/ptm/m/n/10 Les al-go-rithmes ont-ils triés cor-rec-te-ment les com-bi-nai
+-sons aléa-toires de cartes ? Est-ce une preuve
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--403
+
+ []
+
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+ (./TP_Tris.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
 Package rerunfilecheck Info: File `TP_Tris.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 404.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
  ) 
 Here is how much of TeX's memory you used:
  17830 strings out of 492649
  328820 string characters out of 6129622
- 413195 words of memory out of 5000000
+ 415195 words of memory out of 5000000
  21385 multiletter control sequences out of 15000+600000
  24143 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -760,7 +766,7 @@ ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb>
-Output written on TP_Tris.pdf (4 pages, 76926 bytes).
+Output written on TP_Tris.pdf (4 pages, 79387 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
