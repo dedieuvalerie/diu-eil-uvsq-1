@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  26 JUN 2019 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  27 JUN 2019 19:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -672,60 +672,45 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 61.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 97.
- [1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Triparselection.png, id=47, 722.7pt x 694.595pt>
-File: Triparselection.png Graphic file (type png)
-<use Triparselection.png>
-Package pdftex.def Info: Triparselection.png  used on input line 142.
-(pdftex.def)             Requested size: 361.3491pt x 347.29665pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 147.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 139.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 139.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+) [1
 
- []
-
-[2 <./Triparselection.png>] [3]
-<Triparinsertion.png, id=83, 767.86874pt x 674.52pt>
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<Triparselection.png, id=44, 722.7pt x 694.595pt>
+File: Triparselection.png Graphic file (type png)
+<use Triparselection.png>
+Package pdftex.def Info: Triparselection.png  used on input line 147.
+(pdftex.def)             Requested size: 361.3491pt x 347.29665pt.
+ [2 <./Triparselection.png>] [3] [4]
+<Triparinsertion.png, id=89, 767.86874pt x 674.52pt>
 File: Triparinsertion.png Graphic file (type png)
 <use Triparinsertion.png>
-Package pdftex.def Info: Triparinsertion.png  used on input line 247.
+Package pdftex.def Info: Triparinsertion.png  used on input line 314.
 (pdftex.def)             Requested size: 383.93343pt x 337.25917pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--262
-
- []
-
-[4 <./Triparinsertion.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
+ [5 <./Triparinsertion.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 352.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 352.
  (./COURS_Tris.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 352.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 352.
 Package rerunfilecheck Info: File `COURS_Tris.out' has not changed.
 (rerunfilecheck)             Checksum: E8F2972C0D117F785A81CEB40ADCF015;107.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 352.
  ) 
 Here is how much of TeX's memory you used:
- 17874 strings out of 492649
- 329526 string characters out of 6129622
+ 17872 strings out of 492649
+ 329521 string characters out of 6129622
  415212 words of memory out of 5000000
- 21400 multiletter control sequences out of 15000+600000
+ 21398 multiletter control sequences out of 15000+600000
  35010 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,21n,54p,424b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,24n,54p,424b,690s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -738,10 +723,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on COURS_Tris.pdf (4 pages, 162676 bytes).
+Output written on COURS_Tris.pdf (5 pages, 168772 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 147 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  49 named destinations out of 1000 (max. 500000)
  39 words of extra memory for PDF output out of 10000 (max. 10000000)
 
