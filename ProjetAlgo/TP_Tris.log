@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  26 JUN 2019 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.16)  27 JUN 2019 19:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -740,20 +740,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--403
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--416
+
+ []
+
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
  (./TP_Tris.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
 Package rerunfilecheck Info: File `TP_Tris.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
  ) 
 Here is how much of TeX's memory you used:
- 17830 strings out of 492649
- 328820 string characters out of 6129622
- 415195 words of memory out of 5000000
+ 17831 strings out of 492649
+ 328827 string characters out of 6129622
+ 417195 words of memory out of 5000000
  21385 multiletter control sequences out of 15000+600000
  24143 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -766,10 +771,10 @@ ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb>
-Output written on TP_Tris.pdf (4 pages, 79387 bytes).
+Output written on TP_Tris.pdf (4 pages, 79628 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
- 28 named destinations out of 1000 (max. 500000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
